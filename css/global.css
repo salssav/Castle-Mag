@@ -1,0 +1,470 @@
+/* Font Face */
+@font-face {
+    font-family: 'AltRivera-Regular';
+    src: url(../sources/fonts/ALTRiviera-Regular-BF6527666de181e.otf);
+}
+@font-face {
+    font-family: 'AltRivera-Bold';
+    src: url(../sources/fonts/ALTRiviera-Bold-BF6527666d5e3d8.otf);
+}
+@font-face {
+    font-family: 'AltRivera-Extra-Bold';
+    src: url(../sources/fonts/ALTRiviera-Extrabold-BF6527666de8394.otf);
+}
+@font-face {
+    font-family: 'OffBit';
+    src: url(../sources/fonts/OffBitTrial-101Bold.otf);
+}
+@font-face {
+    font-family: 'Hardanger';
+    src: url(../sources/fonts/Hardanger-Rococo.otf);
+}
+
+:root {
+    --font-Alt-Regular: 'AltRivera-Regular', sans-serif;
+    --font-primary:"Archivo", system-ui;
+    --font-Alt-Bold: 'AltRivera-Bold', sans-serif;
+    --font-Alt-ExtraBold: 'AltRivera-Extra-Bold', sans-serif;
+    --font-OffBit: 'OffBit', sans-serif;
+    --font-Hardanger: 'Hardanger', sans-serif;
+    --color-red: #FF0000;
+    --color-blue: #0000FF;
+    --color-grey: #605C5C;
+    --color-black: #111111;
+    --color-white: #FAF9F6;
+    --color-green: #B9FE0D;
+    --theme:light;
+    --cursor-normal: url(/sources/cursor/gauntlet.cur), auto;
+    --cursor-hover: url(/sources/cursor/LINK\ SELECT.cur), auto;
+    --cursor-sword: url(/sources/cursor/sword.cur), auto;
+}
+
+/* TYPO */
+
+h1{
+    font-family: var(--font-Alt-ExtraBold);
+    font-size: 4rem;
+    align-self: stretch;
+    color: var(--color-black);
+}
+h2{
+    font-family: var(--font-Alt-Bold);
+    font-size: 2rem;
+    align-self: stretch;
+    color: var(--color-black);
+}
+h3{
+    font-family: var(--font-OffBit);
+    font-size: 4.4dvi;
+    color: var(--color-black);
+}
+
+h4{
+    font-family: var(--font-Hardanger);
+    font-size: 1.2rem;
+    color: var(--color-blue);
+}
+
+p{
+    font-family: var(--font-primary);
+    font-size: 1.4rem;
+    line-height: 1.45;
+    color: var(--color-black);
+    margin-bottom: 1rem;
+}
+
+a{
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    color: var(--color-black);
+    text-decoration: none;
+}
+a:hover{
+    font-family: var(--font-Alt-ExtraBold);
+    cursor:var(--cursor-hover);
+}
+a.active{
+    font-family: var(--font-Alt-ExtraBold);
+    font-style: italic;
+}
+
+hr{
+    border: 1px solid var(--color-black);
+}
+
+strong {
+    font-weight: 700;;
+    color: var(--color-black);
+    transition: 0.2s ease-in-out;
+}
+strong:hover{
+  font-weight: 800;
+  cursor: var(--cursor-hover);
+}
+i{
+    font-style: italic;
+}
+u{
+  font-weight: 800;
+}
+br{
+  display: block;
+  margin: 1rem 0;
+}
+
+span{
+  margin-left: 1rem;
+}
+/* GENERAL */
+
+::selection {
+  color: var(--color-green);
+  background-color: color-mix(in srgb, var(--color-blue) 60%, var(--color-white) 40%);
+  text-shadow: 2px 2px 2px var(--color-blue)
+}
+
+body {
+  cursor: url(/sources/cursor/gauntlet.cur), auto;
+}
+body{}
+
+section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    position: relative;
+}
+
+main{
+}
+
+.container {
+    width: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body{
+    background-color: var(--color-white);
+}
+
+
+
+/* ETC. */
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    z-index:100;
+}
+
+.header_menu {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+/* MARQUEE TEXT */
+.marquee-text {
+    width: 100%;
+    background: var(--color-white);
+    overflow: hidden;
+
+  }
+  
+  .marquee {
+    width: 100%;
+    overflow: hidden;
+    display: flexbox;
+    align-items: center;
+    border-top: 1px solid var(--color-black);
+    border-bottom: 1px solid var(--color-black);
+     padding: 0.9rem;
+
+
+  }
+  
+  .track {
+    display: inline-block;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    /* Animation duration can be adjusted for speed */
+    animation: marquee-scroll 40s linear infinite;
+  }
+  
+  .track h2 {
+    display: inline-block;       /* Ensure side-by-side, not stacked */
+    color: var(--color-black);
+    line-height: 3.6rem;
+    margin: 0 2rem 0 0;          /* Space between repeats */
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+    padding: 0;
+    border: none;
+    font-size: 2rem;
+  }
+
+  .track-reverse h2{
+    display: inline-block;       /* Ensure side-by-side, not stacked */
+    color: var(--color-black);
+    line-height: 3.6rem;
+    margin: 0 2rem 0 0;          /* Space between repeats */
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+    padding: 0;
+    border: none;
+    font-size: 2rem;
+
+  }
+
+  .track-reverse{
+    display: inline-block;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+
+    /* Animation duration can be adjusted for speed */
+    animation: marquee-scroll-reverse 42s linear infinite;
+
+  }
+/* MARQUEE ANIMATION */
+@keyframes marquee-scroll {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes marquee-scroll-reverse {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+
+  /* FOOTER */
+
+  .footer-section{
+    justify-content: left;
+    padding-left: 2rem;
+  }
+ 
+  footer{
+    height: 13.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+  }
+
+  #footer-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #footer-contact a{
+    font-size:1.8rem;
+    font-style: italic;
+    transition: transform 1.3s;
+  }
+
+  #footer-contact a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--color-black);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+  #footer-contact a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  
+/* Button Theme Changer*/
+.btn_dark-mode {
+    width: .8rem;
+    height: .8rem;
+    background-color: var(--color-black);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.btn_dark-mode:hover {
+    background-color: var(--color-white);
+    radius: 1px var(--color-black);
+    border-style:solid;
+    cursor:var(--cursor-hover)
+}
+/*hide mobile Menu */
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .mobile-menu{
+        display: contents;
+    }
+    .header_menu{
+        display: none ;
+    }
+    .container{
+        max-width: 80rem;
+        padding: 1rem;
+        padding-top: 1rem;
+    }
+    /* The side navigation menu */
+.sidenav {
+    height: 100%; ;
+    align-items: center;
+    flex-direction: column;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    right: 0;
+    background: color-mix(in srgb, var(--color-white) 100%, var(--color-green) 2%);
+    padding-top: 4rem; 
+    transition: 0.4s ease-in-out; 
+  }
+
+  .sidenav.open {
+    width: 10rem;
+    border-left: 1px solid black;
+    transition: 0.4s ease-in-out; 
+
+
+
+  }
+  /* The navigation menu links */
+  .sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: color-mix(in srgb,var(--color-black), 10%, color transparent);
+    display: block;
+    transition: 0.3s;
+  }
+  #myLink{
+    margin-top: 20rem;
+    font-size: 0.8rem;
+    font-family: var(--font-Alt-Bold);
+  }
+  
+
+  #sidenav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background:color-mix(in srgb, var(--color-white) 18%, transparent 80%);
+  }
+
+  #sidenav-overlay.active {
+    display: block;
+  }
+    .article_cards {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .article_card {
+        height: auto;
+        padding-block: 2rem;
+        border-bottom: 1px solid var(--color-black);
+    }
+ 
+ /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  /* Show the overlay when active */
+.sidenav-overlay.active {
+    display: contents;
+  }
+  /* Make sure the menu is above the overlay */
+  .sidenav {
+    z-index: 1000;
+  }
+}
+
+
+
+
+/* Sandwich Menu */
+#menu-sandwich {
+    position: fixed;
+    top: 1rem;
+    right: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-black)
+    ;
+}
+
+/* Rotating Icon */
+
+#rotating_icon{
+    position: fixed;
+    right: 1rem;
+    bottom: 2rem;
+}
+
+#rotating_icon:hover path{
+    cursor: var(--cursor-sword);
+
+}
+svg{
+    fill: var(--color-black);
+    mix-blend-mode: difference;
+}
+
+#rotating_icon{
+    fill: #FFFFFF;
+}
+
+
+
+
+
+

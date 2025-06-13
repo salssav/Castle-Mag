@@ -1,0 +1,324 @@
+
+/*CONTAINER THEMES */
+@container style(--theme: dark) {
+    body {
+        --color-black: #FAF9F6;
+        --color-white: #000000;
+        --color-red: #0000FF;
+        --color-blue: #FF0000;
+    }
+}
+
+#header_logo{
+    height: 1rem;
+}
+
+/* HOME PAGE STYLES */
+/*INTRODUCTION SECTION*/
+.intro{
+    display: contents;
+    
+}
+
+.intro_img img {
+    width: 100vw;
+    height: 120vh;
+    object-fit:cover;
+}
+
+.intro_text{
+    gap: 1rem;
+    flex-direction: column;
+    margin: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    text-align: left;
+    color: var(--color-black);
+}
+
+.intro_text p{
+    font-size: 1.6rem;
+    max-width: 800px;
+}
+
+
+/* ARTICLE CARDS */
+
+.article_card-overlay {
+    display: none;
+}
+.article_card {
+    position: relative;
+    overflow: hidden;
+}
+.article_card-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    background: color-mix(in srgb, var(--color-blue) 5%, var(--color-white) 70%);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    pointer-events: none;
+    padding: 2rem 1rem 1.5rem 1rem;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 2;
+}
+.article_card:hover .article_card-overlay,
+.article_card:focus-within .article_card-overlay {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: var(--cursor-hover);
+}
+/* Hide info outside overlay on desktop */
+
+.intro__content{
+    display: contents;
+}
+
+.article_cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 1rem;
+}
+
+.article_card {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    text-align:left;;
+    transition: all .3s ease;
+    gap: 0.25rem;
+    text-wrap: nowrap;
+    height: 100%;
+    padding: 1rem;
+    border: 2px solid var(--color-black);
+}
+
+.article_card-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.article_card img{
+    width: 100%;
+    align-self: stretch;
+    height:30rem;
+    object-fit: cover;
+}
+
+.article_card-details{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+align-self: stretch;
+}
+
+.article_card img:hover {
+    color: var(--color-white);
+}
+
+/* KEYFRAME ANIMATIONS HOME PAGE */
+
+/* HEADER TRANSFORM */
+#header_logo{
+    height:10rem;
+}
+#header_logo{
+    animation: headerAnimation   both;
+    animation-timeline:scroll();
+    animation-range: 100px 800px;
+  }
+  
+  @keyframes headerAnimation {
+    to {
+        height: 2rem;
+    }
+  }
+/* ROTATING ICON */
+#rotating_icon:hover path{
+    cursor: var(--cursor-hover);
+}
+
+#rotating_icon{
+    animation: rotating_icon  linear reverse;
+    animation-timeline:scroll();
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+@keyframes rotating_icon {
+    to{
+        transform: rotate(360deg);
+    }
+}  
+
+
+/* ARTICLE SOCIAL MEDIA PAGE */
+.article{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 80%;
+    gap: 2rem;
+
+  }
+.article-image{
+    width: 100%;
+}
+.article-image img{
+    width:100%;
+    height:35rem;
+    max-width: none;
+    padding-bottom: 2rem;
+    object-fit: cover;
+    
+}
+
+#interview-title{
+    width: 100%;
+    border-bottom: 1px solid var(--color-black);
+}
+#interview-title h4{
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: var(--color-grey);
+}
+ #interview-qa h4{
+    color: var(--color-black);
+ }
+ .interview{
+    padding: 4rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#interview-qa{
+}
+#image-question img{
+    width:80%;
+}
+#image-question{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.8rem;
+}
+.question{
+    padding-bottom: 4rem;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+
+/*- - - -INTERVIEW TABS - - -*/
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .tabs label {
+    font-family: var(--font-primary);
+    order: 1;
+    color: var(--color-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+    margin-right: 0.2rem;
+    font-weight: bold;
+    transition: 
+    color 0.6s ease-out,
+    box-shadow 0.6s ease-out,
+    border 0.6s ease-out;
+  }
+   
+  .tabs .tab {
+    order: 9;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding: 1rem;
+    background: var(--color-white);
+    border: 1px solid var(--color-black);
+
+    padding: 20px;
+    box-shadow: inset 0px 0px 10px 10px var(--color-green);
+
+  }
+  .tabs input[type="radio"] {
+  display: none;
+}
+ 
+.tabs input[type="radio"]:checked + label {
+    background: var(--color-white);
+    color: var(--color-black);
+    border-right: 1px solid var(--color-black);
+    border-left: 1px solid var(--color-black);
+    border-top: 1px solid var(--color-black);
+    box-shadow: inset 0px 0px 10px 10px var(--color-green);
+
+}
+ 
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+ 
+
+/* NEW MEDIA QUERIES RESPONSIVE FOR MOBILE */
+@media (max-width: 800px) {
+    /*HOME PAGE */
+   .intro__content{
+        display: block;
+    }
+    .article_card-image{
+        height: auto;
+    }
+
+    .article_card img{
+        padding-bottom: 1rem;   
+    }
+    .article_card-overlay{
+        display: contents;
+    }
+    .article_card{
+        border: none;
+    }
+    .interview p{
+        font-size: 1.4rem;
+       }
+    /* SOCIAL MEDIA PAGE */
+    .article{
+        width: 100%;
+    }
+    .interview{
+        padding: 1rem;
+    }
+    .question{
+        padding-bottom: 2rem;
+    }
+    #image-question img{
+        width:100%;
+    }
+    #image-question{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+}

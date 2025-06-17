@@ -277,6 +277,16 @@ footer{
 .tabs input[type="radio"]:checked + label + .tab {
   display: block;
 }
+
+/* ASCII ART ARTICLE */
+#ascii-canvas {
+    width: 100%;
+    height: auto;
+    background: #111;
+    display: flex;
+    font-family: monospace;
+  }
+  
  
 
 /* NEW MEDIA QUERIES RESPONSIVE FOR MOBILE */

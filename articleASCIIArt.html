@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CASTLE MAG</title>
+    <title>ASCII ART</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -55,128 +55,66 @@
 <div class="container">
 <section class="article">
     <div class="article-image">
-            <img src="sources/images/socialMediaDetox.gif" alt="Going Off Grid">
+            <img src="sources/images/asciiHorse.jpg" alt="Assci Horse art">
     </div>    
-    <div id="interview-title"><h1> Going Off Grid</h1>
-    <h2>Why Young People Are Straying Away From Social Media</h2>
+    <div id="interview-title"><h1> ASCII ART</h1>
+    <h2>It’s History and It’s Evolution</h2>
     <h4>June 2025 - by Valentina Velázquez</h4>
 </div>
-
-<div id="intro-interview">
-    <p>Burned out by algorithms and meaningless content, more and more young people are <strong>saying goodbye to the feed and logging out for good.</strong> What once was a way to easily keep up with our friends and people we looked up to, has turned into a stream of ads, sponsored content and brain rot. <br> Apps that were originally made to form connections have turned into a multi-billion dollar industry; designed to keep you hooked. ✰ The days of seeing posts in a simple, chronological order are long gone. ✰ </p>
-    <p>It’s no surprise that                     <u class="bb9000-hover-area" style="position:relative;">
-        doom-scrolling
-        <img 
-          src="/sources/images/brainrot.jpeg" 
-          alt="doom-scrolling" 
-          class="bb9000-fly-img" 
-          style="position:fixed; pointer-events:none; width:15rem; "
-        >
-      </u>is on the rise, with hours spent consuming content that leaves us feeling empty and lonely. 
-    </p>
-    <p>✶ ₊˚⊹But, instead of diving deeper into the digital noise, many are choosing to take a step back from the pressure of being online all the time. Some are turning off notifications, some are going on social media detoxes, some are moving completely off-grid and finding peace in the offline world. But <i> <strong>It’s not about disappearing completely; it’s about reconnecting. To ourselves, to others, and to real, meaningful experiences. </i></strong>
-    </p>
-    <i><p>"So what does logging off actually look like?"" We asked a few people living this way..</i>
-    </p>
-</div>
-<!--- - TABS - -->
-<div class="tabs">
-    <input type="radio" name="tabs" id="tabOne" checked="checked">
-    <label for="tabOne"> Isa </label>
-    <!--Interview 1-->
-<div class="tab">
-    <div class="interview" id="interview-1">
-        <div class="question" id="image-question">
-            <img src="sources/images/isa photo.jpeg" alt="Isabel" class="interview-image">
-        </div>
-<div class="interview" id="interview-qa">
-    <div class="question" id="question-1"><p> <strong>What's your name, how old are you and where are you from?</strong></h4>
-    <p> <strong>I:</strong> Isabel, 27 years old & from Switzerland </p>    
-</div>
-
-    <div class="question" id="question-2"><p> <strong>How long have you been off social media for?</strong></h4>
-    <p><strong>I:</strong> Each year is a bit different. Anywhere from 1 month to 3 months. The most recent time period was 10 months.</p>    
- </div>
-    <div class="question" id="question-3"><p> <strong>What made you take that decision?</strong></h4>
-        <p><strong>I:</strong> Usually I just get to a point where I’m either feeling fed up with it, using it too much or I actively realize that I feel bad because of it.</p>    
-</div> 
-    <div class="question" id="question-4"><p> <strong>How has your relationship with social media changed since?</strong></h4>
-    <p><strong>I:</strong> Every time I do choose to use social media again, I have a healthier relationship to it. It’s an active choice of entertainment & not just doom scrolling. It is impressive though, how quick thoughts of comparison sneak back in.</p>    
-</div>
-    <div class="question" id="question-5"><p> <strong>Do you ever feel like you’re missing out?</strong></h4>
-    <p><strong>I:</strong> No. When I’m off social media I never feel like missing out. Fomo is more present, when I do have it & constantly can see what other people are up to.</p>    
-</div>
-
-    <div class="question" id="question-6"><p> <strong>How has going off-grid affected your social life?</strong></h4>
-    <p><strong>I:</strong> I would love to say, something drastically changed, but not really - since a lot of people still use it, it’s not a collective change in social interactions. <p> It is definitely a conversation starter & everybody reacts super positively to it. You also become this mystery person to others, because they can’t stalk your profile anymore.</p></p>    
-</div>
-    <div class="question" id="question-7"><p> <strong>What would you say to someone who's thinking about doing a social-media detox? Any tips?</strong></h4>
-    <p><strong>I:</strong> Do it. Observe your behavior & thoughts. Write them down. You’ll have to intentionally find something else to do, you’ll feel bored in the beginning, but it’ll fade & you won’t realize it’s gone after a while.</p>    
-</div> 
-<div class="question" id="question-8"><p> <strong>What do you think the future of social media looks like with the newer generations? Are we yearning for more in-person connection?</strong></h4>
-    <p><strong>I:</strong> Recently there was a power outage & it was beautiful to see how easily people go back to spending time outside, socializing in person & being active. <p>It was a good reminder that we haven’t unlearned it, but it was also shocking to see that electricity needs to be taken away for us to choose that.</p> <br> <p>So I think we yearn for it, but not enough, because electronics give us these short-term dopamine hits that keep us trapped or give us this illusion of satisfaction. I definitely think newer generations struggle to connect in person, if they don’t receive parenting that emphasizes on being in connection with others.</p><p>Social media is & becomes more & more intertwined with our reality & I don’t think this will slow down. So it’s on each individual to <strong><i>be very intentional </i></strong>about letting these platforms receive access to our personal lives.</p></p>  
-</div> 
-    
-</div>
+<div id="ascii-webcam-container" style="text-align:center;">
+    <video id="ascii-video" autoplay playsinline style="display:none;"></video>
+    <canvas id="ascii-canvas"></canvas>
+    <div style="margin-top:1em;">
+      <button id="ascii-start-btn">Start ASCII Cam</button>
+      <button id="ascii-stop-btn" disabled>Stop ASCII Cam</button>
     </div>
-</div>
-
-    <!--Interview 2-->
-    <input type="radio" name="tabs" id="tabTwo">
-    <label for="tabTwo"> Sean </label>
-    <div class="tab">
-        <div class="interview" id="interview-2">
-            <div class="question" id="image-question">
-                <img src="sources/images/seanpotrait.JPG" alt="Isabel" class="interview-image">
-            </div>
-            <div class="interview" id="interview-qa">
-                <div class="question" id="question-1"><p> <strong>What's your name, how old are you and where are you from?</strong></h4>
-                <p> <strong>S:</strong> Sean Henniker-Heaton, I am 21 years of age and come from New Zealand and France.</p>    
-            </div>
-                <div class="question" id="question-2"><p> <strong>How long have you been off social media for?</strong></h4>
-                <p><strong>S:</strong> I have stopped using social media for over a year now.</p>    
-             </div>
-                <div class="question" id="question-3"><p> <strong>What made you take that decision?</strong></h4>
-                    <p><strong>S:</strong> I found myself checking out the hours spent on apps through settings and feeling disgusting as to waste and take the precious time I have for granted. <p>I was falling asleep to brain rot and other digital content and not making the progress I desired to make in my day-to-day life. I realised that at the core, all I would miss was communication with friends and family which I quickly found alternative means of communication for.</p>
-                    </p>    
-            </div> 
-                <div class="question" id="question-4"><p> <strong>How has your relationship with social media changed since?</strong></h4>
-                <p><strong>S:</strong> Social media is a business, it is designed and constantly improved to keep people using it. An incredible amount of money and effort has gone into studying human psychology, impulses and behaviour to create these softwares that we deem essential, whether consciously or subconsciously, it is a fundamental part of most’s lives today. <p>My relationship with this business changed when I realised that a minority of after-effects that it has are positive. Certainly the case for me, the only things I enjoyed were the discovery of underground car scenes, picturesque places and new music. However, the cons far outweighed the pros and much like my communication with friends and family, I soon found alternate ways of discovering more about things I love and have yet to love. </p> <p>I now look upon social media very rarely, the times I do, it will usually be friends or a loved one showing me something, or for me to come on and say hello to those of whom I have no alternative to do so.</p>
-                </p>    
-            </div>
-                <div class="question" id="question-5"><p> <strong>Do you ever feel like you’re missing out?</strong></h4>
-                <p><strong>S:</strong> Further confirming the point I made in my previous answer, the billions of $ used to develop the nuances that are so important to keeping social media in your head are incredibly effective. <p>Though I hate to admit it, sometimes they find their way into making me feel that I am missing out on something. Whenever such thoughts pass through my mind,</p> <p>I remind myself that this is by design and then further prove my decision to be the right one by delving into the things I have found to love much more, reading, being in nature and spending quality time with friends. Comparing the life I have now with the one I led over a year ago, I am so thankful and proud to have made the changes I have.</p>
-                </p>    
-            </div>
-            
-                <div class="question" id="question-6"><p> <strong>How has going off-grid affected your social life?</strong></h4>
-                <p><strong>S:</strong> I am naturally quite a reserved person and so was not too worried about the effects it would have. I know that my friends and loved ones understand and support the decisions I make. <p>It certainly did not facilitate my life as I went for a rather extreme route of using a
-                    <u class="bb9000-hover-area" style="position:relative; cursor:pointer;">
-                      Blackberry 9000
-                      <img 
-                        src="/sources/images/blackberry.jpg" 
-                        alt="Blackberry 9000" 
-                        class="bb9000-fly-img" 
-                        style="position:fixed; pointer-events:none; width:200px; z-index:9999;"
-                      >
-                    </u>
-                  for over half a year,  <strong><i> no maps, no uber and only being able to communicate with SMS and calls whilst on the move.</p> </i></strong> <p>Despite the predicament I willingly put myself in, it taught me so much about myself and the world and the people within it. I carried on meeting people and in retrospect, did not suffer socially whatsoever.</p>
-                </p>    
-            </div>
-                <div class="question" id="question-7"><p> <strong>What would you say to someone who's thinking about doing a social-media detox? Any tips?</strong></h4>
-                <p><strong>S:</strong> I would advise anyone to try it out. The key to finding success would lie in what I see as the two pillars to replacing the dopamine they would now have to find elsewhere. <p>The first being consistency, this in turn instills pride and fulfilment to <i> <strong> re-install confidence in yourself and your abilities. </i> </strong>To stay consistent, it is imperative to have something that you have found or will possibly find in the near future to be of great interest to you, to do in the times you would otherwise be using social media. </p> <p>I have found things like my passion for reading to have re-ignited and in-turn have delved further into research of all that interests me. Though I do not recommend replacing these apps with other softwares such as netflix, etc.. </p> <p> I would recommend <i> <strong> training your attention span </i></strong>to be able to focus for longer periods of time through longer-form content such as movies and documentaries on what you find interesting.</p> <p> I also recommend allowing yourself to be bored, it’s something we rarely find ourselves doing in this face-paced world but it allows you to spend time with yourself, only yourself and in turn allows you to think and reflect.</p>
-                </p>    
-            </div> 
-            <div class="question" id="question-8"><p> <strong>What do you think the future of social media looks like with the newer generations? Are we yearning for more in-person connection?</strong></h4>
-                <p><strong>S:</strong> I fear for the current and future generations, everyday I see and hear proof to further solidify this worry. <p>Toddlers are hooked to these machines and softwares from the moment they can lift a finger, the scariest part being that it’s not just toddlers but their parents too, further solidifying their habits as they grow and follow in their parents footsteps. </p> <p>A vast majority of parents give a tablet or phone to their children to keep them occupied. I see this all the time in restaurants, parks and schools, places where socialising is of the utmost importance both for the child’s development and for society as a whole. </p> <p>I hope in and support those of us who reject the toxicity that technology can bring and instead use it for good. Cynically though, I can’t help but think that the future of humanity will be overcome with addiction and sloth.</p>
-                </p>    
-            </div> 
-                
-            </div>
-                </div>
+  </div>
+  
+  
+    <div class="article-content">
+        <p>You’ve probably seen this type of drawing before.</p> <pre>
+             /\_/\  
+            ( o.o ) 
+             > ^ <
+        </pre>
+        <pre>
+            / \__
+           (    @\___
+            /         O
+           /   (_____/
+           /_____/ U
+           </pre>
+        <p>Maybe it reminds you of the early internet days. Super simple, kind of pixel-y, and completely made with text. What you might not know is that this is an art form named: <strong>ASCII</strong>
+        </p>
+        <p>So… what even is <strong> ASCII</strong>?
+            Well, It stands for <i> <strong> American Standard Code for Information Interchange. </strong> </i> Which is just nerd-speak for saying that it’s a system that uses letters, numbers, and symbols to represent text. So ASCII art is basically drawing with your keyboard.
+        </p>
+        <hr>
+        <br>
+        <h2>Where it all started</h2>
+        <p>Long before computers were a thing, people were already getting creative with text. Poets started shaping their handwritten words into images. Kind of like visual poetry. One of the best-known was <i><strong> Guillaume Apollinaire,</strong></i> whose 1917 "calligrams" turned entire poems into drawings
+        </p>
+        <img src="sources/images/calligram.png" alt="Calligram by Guillaume Apollinaire">
+        <br>
+        <p>
+            Around the same time, typewriters came into the picture. People started using them not just for writing, but for experimenting. A cool example is in Alice in Wonderland (1865), where Lewis Carroll shaped a mouse’s speech into the form of its tail. Yep, that curly bit of text in Chapter III? That’s classified as the first printed text art creation:
+        </p>
+        <img src="sources/images/lewisCarol.jpg" alt="Alice in Wonderland text art">
+        <p>
+            By the late 1800s, typewriter art had become recognized by the public. Typing contests were held. Not just for speed, but also for creativity. One of the earliest saved pieces was made in 1898 by a woman named Flora Stacey. We don’t know much about her, except that she was a secretary. Flora created a butterfly using nothing but typewriter characters. Brackets, slashes, dots, asterisks. That butterfly was featured in Pitman's Phonetic Journal and is considered one of the first pieces of proper typewriter art
+        </p>
+        <img src="sources/images/butterflyCalligram.jpg" alt="Flora Stacey typewriter art">
+        <hr>
+        <br>
+        <h2>From Paper to Pixels</h2>
+        <p>
+            Once computers took over, typewriter art naturally went digital. Early computers couldn’t handle images well, so ASCII characters were perfect for this transitional period. Since they were so lightweight, people started using ASCII as much as they could. Even creating visuals using only characters.  
+            In the ‘80s and ‘90s, ASCII art popped up everywhere. In early computer games, email signatures, chat rooms, and hacker culture. It was the unofficial visual language of the internet. Before emojis and memes, this was how people expressed themselves. If you've ever typed :-) or seen ¯\_(ツ)_/, congrats you’ve used ASCII.
+        </p>
     </div>
 
-</div>
+
+
 
 
 </section>

@@ -115,6 +115,14 @@ br{
 span{
   margin-left: 1rem;
 }
+pre {
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1.4;
+  white-space: pre;
+  padding: 1rem;
+}
+
 /* GENERAL */
 
 ::selection {

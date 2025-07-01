@@ -103,10 +103,10 @@ const ctx = canvas.getContext('2d');
 const startBtn = document.getElementById('ascii-start-btn');
 const stopBtn = document.getElementById('ascii-stop-btn');
 
-const asciiChars = "@#W$9876543210?!abc;:+=-,._";
-const charWidth = 8;
-const charHeight = 16;
-const asciiCols = 60;
+const asciiChars = "@#W$9876543210?!abc;:+=-,.___";
+const charWidth = 10;
+const charHeight = 22;
+const asciiCols = 80;
 let asciiRows;
 let animationId;
 let stream = null;
@@ -137,7 +137,7 @@ function drawAscii() {
       const avg = (r + g + b) / 3;
       const charIdx = Math.floor((avg / 255) * (asciiChars.length - 1));
       const char = asciiChars[charIdx];
-      ctx.fillStyle = "#fff";
+      ctx.fillStyle = "#FFF";
       ctx.font = `${charHeight}px monospace`;
       ctx.fillText(char, x * charWidth, (y + 1) * charHeight - 4);
     }

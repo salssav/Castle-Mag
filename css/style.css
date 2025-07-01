@@ -208,7 +208,7 @@ footer{
 #image-question img{
     width:80%;
 }
-#image-question{
+#image-question, #image-ascii{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -282,12 +282,21 @@ footer{
 #ascii-canvas {
     width: 100%;
     height: auto;
-    background: #111;
     display: flex;
     font-family: monospace;
+    background-color: black;
   }
-  
- 
+  #ascii-webcam-container{
+    width: 100%;
+  }
+  #image-ascii img{
+    width: 100px;
+    transition: width 0.8s ease-in-out;
+  }
+  #image-ascii img:hover {
+    width: 400px;;
+  }
+
 
 /* NEW MEDIA QUERIES RESPONSIVE FOR MOBILE */
 @media (max-width: 800px) {
@@ -331,4 +340,10 @@ footer{
         justify-content: center;
         padding: 1rem;
     }
+    /* ASCII PAGE */
+    #image-ascii img{
+        width: 400px;
+    }
+
+
 }

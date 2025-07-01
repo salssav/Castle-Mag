@@ -65,7 +65,7 @@ h4{
     color: var(--color-blue);
 }
 
-p{
+p, pre{
     font-family: var(--font-primary);
     font-size: 1.4rem;
     line-height: 1.45;
@@ -122,8 +122,15 @@ pre {
   white-space: pre;
   padding: 1rem;
 }
+button{
+  font-family: var(--font-Hardanger);
+}
 
 /* GENERAL */
+
+img{
+  
+}
 
 ::selection {
   color: var(--color-green);

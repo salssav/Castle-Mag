@@ -140,8 +140,11 @@ img{
 
 body {
   cursor: url(/sources/cursor/gauntlet.cur), auto;
+
 }
-body{}
+body::-webkit-scrollbar {
+  display: none;                 /* Chrome, Safari, Edge */
+}
 
 section {
     width: 100%;
@@ -154,6 +157,27 @@ section {
 
 main{
 }
+
+.scroll_container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 10px;           /* vertical bar width */
+  height: 100vh;         /* full height of screen */
+  display: flex;
+  align-items: flex-end; /* so the bar grows upward */
+  z-index: 1000;
+}
+
+.scroll_bar {
+  width: 100%;
+  height: 0%;
+  background-color: var(--color-white);
+  background-blend-mode: color-dodge;
+  border: 1px dashed var(--color-black);
+  transition: height 0.1s ease;
+}
+
 
 .container {
     width: 100%;

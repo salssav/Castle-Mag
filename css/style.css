@@ -286,16 +286,26 @@ footer{
     font-family: monospace;
     background-color: black;
   }
+
+  #ascii-article-all{
+    padding: 2rem;
+    box-shadow: 0px 6px 40px 2px #4934c0;
+    border-radius: 1px solid var(--color-black);
+  }
+
+  #intro-interview{
+    padding-top: 2rem;
+  }
+
   #ascii-webcam-container{
     width: 100%;
   }
-  #image-ascii img{
-    width: 100px;
-    transition: width 0.8s ease-in-out;
-  }
-  #image-ascii img:hover {
-    width: 400px;;
-  }
+  #ascii-article-content h2{
+    text-shadow: 0px 3px 12px #4934c0 
+ }
+
+
+
 
 
 /* NEW MEDIA QUERIES RESPONSIVE FOR MOBILE */
@@ -345,5 +355,13 @@ footer{
         width: 400px;
     }
 
-
+    #ascii-article{
+        background-image: none;
+    }
+    #ascii-article-all{
+        padding: 1rem;
+        box-shadow: 0px 6px 10px 2px #4934c0;
+        border-radius: 1px solid var(--color-black);
+      }
+    
 }

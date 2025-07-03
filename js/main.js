@@ -182,6 +182,14 @@ startBtn.addEventListener('click', startAsciiCam);
 stopBtn.addEventListener('click', stopAsciiCam);
 window.addEventListener('resize', resizeCanvas);
 
+// SCROLL BAR AND SCROLL EVENT
+//esto hace que la consola te devuelva el scroll de tu mouse
+document.addEventListener('scroll', function () {
+  const maxScroll = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = (window.scrollY / maxScroll) * 100;
+  const scrollBar = document.querySelector('.scroll_bar');
+  scrollBar.style.height = scrollPercent + '%';
+});
 
   // GSAP SMOOTH SCROLL EXAMPLE (using CDN)
   if (typeof gsap !== "undefined" && typeof ScrollToPlugin !== "undefined") {
@@ -191,4 +199,5 @@ window.addEventListener('resize', resizeCanvas);
   }
 
 });
+
 

@@ -172,8 +172,7 @@ main{
 .scroll_bar {
   width: 100%;
   height: 0%;
-  background-color: var(--color-white);
-  background-blend-mode: color-dodge;
+  background-blend-mode:difference;
   border: 1px dashed var(--color-black);
   transition: height 0.1s ease;
 }

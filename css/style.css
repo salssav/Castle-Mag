@@ -303,6 +303,25 @@ footer{
   #ascii-article-content h2{
     text-shadow: 0px 3px 12px #4934c0 
  }
+ /* gallery */
+
+.gallery{
+    height: 80dvh;
+    min-height: auto;
+}
+
+#draggable, #draggable_2, #draggable_3, #draggable_4, #draggable_5, #draggable_6 {
+    position: absolute;
+    z-index: 9;
+  }
+  
+  #draggable_element {
+    cursor:grab;
+  }
+
+  #draggable_element:active {
+    cursor: grabbing;
+  }
 
 
 

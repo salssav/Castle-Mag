@@ -476,9 +476,14 @@ header {
     right: 0.8rem;
     display: flex;
     flex-direction: column;
-    color: var(--color-black)
-    ;
+    color: var(--color-black);
+    margin: 2px solid white; 
 }
+#menu-sandwich svg, #header_logo{
+  stroke: var(--color-white);
+
+}
+
 
 /* Rotating Icon */
 

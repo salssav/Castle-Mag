@@ -313,15 +313,19 @@ footer{
 #draggable, #draggable_2, #draggable_3, #draggable_4, #draggable_5, #draggable_6 {
     position: absolute;
     z-index: 9;
+    touch-action: none;
   }
   
   #draggable_element {
     cursor:grab;
-  }
+    max-width: 14rem;
+}
 
   #draggable_element:active {
     cursor: grabbing;
   }
+
+  
 
 
 
@@ -379,8 +383,13 @@ footer{
     }
     #ascii-article-all{
         padding: 1rem;
-        box-shadow: 0px 6px 10px 2px #4934c0;
+        box-shadow: 0px 0px 10px 2px #4934c0;
         border-radius: 1px solid var(--color-black);
+    }
+    #draggable_element {
+        cursor:grab;
+        max-width: 12rem;
       }
+    
     
 }

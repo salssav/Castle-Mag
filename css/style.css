@@ -203,8 +203,6 @@ footer{
     
 }
 
-#interview-qa{
-}
 #image-question img{
     width:80%;
 }
@@ -325,8 +323,32 @@ footer{
     cursor: grabbing;
   }
 
+/* GROCERIES ARTICLE */
+.accordion-header {
+    font-family: var(--font-Hardanger);
+    text-shadow: 0px 3px 4px #6e6d6d;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+    cursor: pointer;
+    outline: none;
+    border-top: 2px solid var(--color-black);
+  }
   
-
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    padding-left: 0.5rem;
+  }
+  
+  .accordion-content p {
+    margin: 1rem 0;
+  }
+  
 
 
 

@@ -140,7 +140,7 @@ img{
 
 body {
   cursor: url(/sources/cursor/gauntlet.cur), auto;
-
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 body::-webkit-scrollbar {
   display: none;                 /* Chrome, Safari, Edge */
@@ -204,7 +204,7 @@ body{
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   gap: 2rem;
 }
 
@@ -381,7 +381,7 @@ header {
 .mobile-menu {
     display: none;
 }
-
+/* MOBILE SCREEN STYLES */
 @media (max-width: 800px) {
     .mobile-menu{
         display: contents;
@@ -394,6 +394,9 @@ header {
         padding: 1rem;
         padding-top: 1rem;
     }
+    .article{
+        width: 100%;  
+        }
     /* The side navigation menu */
 .sidenav {
     height: 100%; ;

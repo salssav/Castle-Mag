@@ -267,6 +267,10 @@ footer{
 }
 
 /* ASCII ART ARTICLE */
+
+#ascii-article{
+    width: 80%;
+}
 #ascii-canvas {
     width: 100%;
     height: auto;
@@ -403,6 +407,63 @@ footer{
     justify-content: center;
     gap: 1rem;
   }
+/* ARTICLES PAGE  */
+.mwg_effect000 {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.mwg_effect000 .header div:nth-child(2) {
+    font-size: 26px;
+}
+.mwg_effect000 .header div:last-child {
+    display: flex;
+    justify-content: flex-end;
+}
+.mwg_effect000 .button {
+    font-size: 14px;
+    text-transform: uppercase;
+    
+    border-radius: 24px;
+    height: 48px;
+    gap: 5px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    width: max-content; 
+}
+
+.mwg_effect000 .button img {
+    width: 22px;
+    height: auto;
+    display: block;
+}
+
+.mwg_effect000 .medias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1vw;
+}
+.mwg_effect000 .medias img {
+    width: 11vw;
+    height: 11vw;
+    object-fit: fill;
+    border-radius: 4%;
+    display: block;
+    will-change: transform;
+}
+
+@media (max-width: 768px) {
+    .mwg_effect000 .medias {
+        gap: 1vw;
+    }
+    .mwg_effect000 .medias img {
+        width: 24vw;
+        height: 24vw;
+    }
+}
 
 /* NEW MEDIA QUERIES RESPONSIVE FOR MOBILE */
 @media (max-width: 800px) {
@@ -447,6 +508,9 @@ footer{
         padding: 1rem;
     }
     /* ASCII PAGE */
+    #ascii-article{
+        width: 100%;
+    }
     #image-ascii img{
         width: 400px;
     }

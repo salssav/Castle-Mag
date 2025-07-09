@@ -155,6 +155,7 @@ section {
     position: relative;
 }
 
+
 main{
 }
 
@@ -198,6 +199,14 @@ body{
 
 /* ETC. */
 
+.article{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+}
 
 header {
     position: fixed;
@@ -465,10 +474,6 @@ header {
     z-index: 1000;
   }
 }
-
-
-
-
 /* Sandwich Menu */
 #menu-sandwich {
     position: fixed;
@@ -483,8 +488,6 @@ header {
   stroke: var(--color-white);
 
 }
-
-
 /* Rotating Icon */
 
 #rotating_icon{

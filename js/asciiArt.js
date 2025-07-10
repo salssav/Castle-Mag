@@ -1,4 +1,4 @@
-// ASCII CAMERA
+// ASCII CAMERA (MOBILE + DESKTOP COMPATIBLE)
 const video = document.getElementById('ascii-video');
 const canvas = document.getElementById('ascii-canvas');
 const ctx = canvas.getContext('2d');
@@ -48,16 +48,25 @@ function drawAscii() {
 }
 
 function startAsciiCam() {
-  navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-    .then(mediaStream => {
+  navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" }, audio: false })
+    .then(async mediaStream => {
       stream = mediaStream;
       video.srcObject = stream;
-      video.onloadedmetadata = () => {
-        video.play();
-        resizeCanvas();
-        animationId = requestAnimationFrame(drawAscii);
-        stopBtn.disabled = false;
-        startBtn.disabled = true;
+
+      video.setAttribute('playsinline', true); // Required for iOS Safari
+      video.setAttribute('muted', true);       // Ensure autoplay works
+      video.muted = true;
+
+      video.onloadedmetadata = async () => {
+        try {
+          await video.play();
+          resizeCanvas();
+          animationId = requestAnimationFrame(drawAscii);
+          stopBtn.disabled = false;
+          startBtn.disabled = true;
+        } catch (err) {
+          alert("Video play error: " + err.message);
+        }
       };
     })
     .catch(err => {
@@ -72,7 +81,7 @@ function stopAsciiCam() {
   }
   if (stream) {
     stream.getTracks().forEach(track => track.stop());
-    stream = null;  
+    stream = null;
   }
   video.srcObject = null;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -83,6 +92,7 @@ function stopAsciiCam() {
 startBtn.addEventListener('click', startAsciiCam);
 stopBtn.addEventListener('click', stopAsciiCam);
 window.addEventListener('resize', resizeCanvas);
+
 
 // DRAGGABLE GALLERY
 /* DRAGGABLE PHOTOS */

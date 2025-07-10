@@ -33,6 +33,8 @@
     --color-black: #111111;
     --color-white: #FAF9F6;
     --color-green: #B9FE0D;
+    --color-purple: #6563f6;
+    --color-pastel-green:#f5f9e4;
     --theme:light;
     --cursor-normal: url(/sources/cursor/gauntlet.cur), auto;
     --cursor-hover: url(/sources/cursor/LINK\ SELECT.cur), auto;
@@ -128,9 +130,6 @@ button{
 
 /* GENERAL */
 
-img{
-  
-}
 
 ::selection {
   color: var(--color-green);
@@ -145,6 +144,15 @@ body {
 body::-webkit-scrollbar {
   display: none;                 /* Chrome, Safari, Edge */
 }
+/* For Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+html, body {
+  scrollbar-width: none;
+}
 
 section {
     width: 100%;
@@ -153,10 +161,6 @@ section {
     justify-content: center;
     gap: 4rem;
     position: relative;
-}
-
-
-main{
 }
 
 .scroll_container {
@@ -426,7 +430,7 @@ header {
     text-decoration: none;
     font-size: 1.6rem;
     color: color-mix(in srgb,var(--color-black), 10%, color transparent);
-    display: block;
+    display: flex;
     transition: 0.3s;
   }
   #myLink{

@@ -240,6 +240,10 @@ header {
     overflow: hidden;
 
   }
+  /*about*/
+#marquee-about{
+  background: var(--color-green);
+}
   
   .marquee {
     width: 100%;

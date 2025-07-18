@@ -240,6 +240,126 @@ footer{
   object-fit: cover;
 }
 
+/* CONTACT PAGE */
+
+#marquee-contact{
+  padding-top: 4rem;
+  border: none;
+}
+#track-reverse-contact h2{
+  font-size: 6rem;
+  color: var(--color-green);
+}
+
+/*  ▼  contact.css  ▼  */
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12rem;
+  justify-content: space-between;
+  --gap: 1rem;
+  margin: 0 auto;
+  padding: 2rem var(--gap);
+  border-radius: 1rem;
+  width: webkit-fill-available;
+}
+
+/* Cool font from Google Fonts! */
+@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+
+body {
+	margin: 0px;
+}
+
+#container {
+
+	/* This filter is a lot of the magic */
+	filter: url(#threshold) blur(0.7px);
+}
+
+#text1, #text2 {
+  padding-top: 4rem;
+	position: absolute;
+	width: 100%;
+	display: inline-block;
+	
+	font-family: 'Raleway', sans-serif;
+	font-size: 20rem;
+  color: var(--color-black);
+	
+	text-align: start;
+	
+	user-select: none;
+}
+.contact__title {
+  margin-bottom: 1.5rem;
+}
+.contact_header{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.contact-img{
+  width:120%;
+}
+/* --- Grid layout --- */
+.contact__form {
+  width: 50%;
+  display: grid;
+  gap: var(--gap);
+}
+.field { display: flex; flex-direction: column; }
+
+.field--full { grid-column: 1 / -1; }
+
+label {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--color-black);
+  font-family: var(--font-primary);
+}
+
+input,
+textarea {
+  padding: .75rem 1rem;
+  border: 2px solid var(--color-black);
+  font-family:Arial, Helvetica, sans-serif;
+  border-radius: .5rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-green);
+}
+
+small.error {
+  color: #b00020;
+  font-size: .75rem;
+  height: 0;
+  margin-top: 0.25rem;
+}
+
+.btn {
+  padding: 0.9rem 1.5rem;
+  border: none;
+  background: var(--color-green);
+  color: var(--color-black);
+  font-size: 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  grid-column: 1 / -1; 
+}
+
+.btn:hover,
+.btn:focus-visible { background: var(--color-blue); }
+
+
+
 /* ARTICLE SOCIAL MEDIA PAGE */
 
 .article-image{
@@ -564,6 +684,18 @@ footer{
     .interview p{
         font-size: 1.4rem;
        }
+    /* CONTACT PAGE */
+    .contact_header{
+        width: 100%;
+    }
+    .contact__form{
+      width: 80%;
+    }
+    #text1, #text2 {
+      padding-top: 6rem;
+        font-size: 9rem;
+    }
+
     /* SOCIAL MEDIA PAGE */
     .article{
         width: 100%;

@@ -3,16 +3,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
   /* DARK MODE */
   const darkModeButton = document.querySelector('.btn_dark-mode');
-  if (darkModeButton) {
-    darkModeButton.addEventListener('click', () => {
-      const currentTheme = getComputedStyle(document.documentElement).getPropertyValue('--theme').trim();
-      if (currentTheme === 'dark') {
-        document.documentElement.style.setProperty('--theme', 'light');
-      } else {
-        document.documentElement.style.setProperty('--theme', 'dark');
-      }
-    });
-  }
+
+if (darkModeButton) {
+  darkModeButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    // Optional: save preference in localStorage
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+}
+
+// On page load: check saved theme
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark-mode');
+}
 
   /* ROTATING ICON CLICK TO TOP */
   const topBtn = document.getElementById("rotating_icon");
@@ -21,6 +29,15 @@ document.addEventListener("DOMContentLoaded", function() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
+  /*make it rotate*/
+  const rotatingIcon = document.getElementById("rotating_icon");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const rotation = scrollTop / 4; // Keep it within 0–360°
+  rotatingIcon.style.transform = `rotate(${rotation}deg)`;
+});
+
 
   /* Side Navigation for Mobile */
   const menuBtn = document.getElementById('menu-sandwich');
@@ -97,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   
-// SCROLL BAR AND SCROLL EVENT
+// SCROLL BAR
 //esto hace que la consola te devuelva el scroll de tu mouse
 console.log('Scroll bar JS loaded');
 
@@ -120,5 +137,28 @@ document.addEventListener('scroll', () => {
   }
 
 });
+
+// HEADER LOGO ANIMATION 
+const headerLogo = document.getElementById("header_logo");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // Set threshold range similar to 100px – 800px
+  const minScroll = 100;
+  const maxScroll = 400;
+
+  // Clamp scroll position
+  const clampedScroll = Math.min(Math.max(scrollY, minScroll), maxScroll);
+  const progress = (clampedScroll - minScroll) / (maxScroll - minScroll);
+
+  // Interpolate height from 10rem to 2rem
+  const maxHeight = 10;
+  const minHeight = 2;
+  const newHeight = maxHeight - (maxHeight - minHeight) * progress;
+
+  headerLogo.style.height = `${newHeight}rem`;
+});
+
 
 

@@ -60,8 +60,9 @@
     justify-content: center;
     position: absolute;
     inset: 0;
-    background: color-mix(in srgb, var(--color-blue) 5%, var(--color-white) 70%);
+    background: rgba(176, 185, 209, 0.377);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     opacity: 0;
     pointer-events: none;
     padding: 2rem 1rem 1.5rem 1rem;
@@ -127,31 +128,9 @@ align-self: stretch;
 width: 90rem;
 }
 
-/* KEYFRAME ANIMATIONS HOME PAGE */
-
-/* HEADER TRANSFORM */
-#header_logo{
-    height:10rem;
-}
-#header_logo{
-    animation: headerAnimation   both;
-    animation-timeline:scroll();
-    animation-range: 100px 800px;
-  }
-  
-  @keyframes headerAnimation {
-    to {
-        height: 2rem;
-    }
-  }
 /* ROTATING ICON */
 #rotating_icon:hover path{
     cursor: var(--cursor-hover);
-}
-
-#rotating_icon{
-    animation: rotating_icon  linear reverse;
-    animation-timeline:scroll();
 }
 
 footer{
@@ -159,12 +138,6 @@ footer{
     flex-direction: row;
     justify-content: flex-start;
 }
-
-@keyframes rotating_icon {
-    to{
-        transform: rotate(360deg);
-    }
-}  
 
 /* ARTICLES PAGE  */
 .mwg_effect000 {
@@ -244,6 +217,8 @@ footer{
 
 #marquee-contact{
   padding-top: 4rem;
+  background-color: var(--color-white);
+
   border: none;
 }
 #track-reverse-contact h2{
@@ -334,7 +309,8 @@ textarea {
 
 input:focus,
 textarea:focus {
-  outline: 2px solid var(--color-green);
+  outline: 4px solid var(--color-green);
+  
 }
 
 small.error {
@@ -618,14 +594,14 @@ small.error {
 }
 
 .low-poly{
-  display:ruby;
+  display:block;
   overflow: hidden;        
   max-width: 90%;         
-  background-color: var(--color-black);
+  background-color: var(--color-white);
   margin: 2rem auto;  
 }
 .low-poly h1{
-    color: var(--color-white);
+    color: var(--color-black);
     text-shadow: 0px 3px 12px var(--color-green);
     text-align: start;
     font-size: 2rem;

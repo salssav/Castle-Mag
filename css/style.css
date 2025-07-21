@@ -615,19 +615,52 @@ small.error {
   box-shadow: 0px 3px 40px var(--color-green) ;
 }
 
-.lowPolyScan{
+.lowPolyScan {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
   min-height: 600px;
+}
+
+.lowPolyScan iframe {
+  width: 100%;
+  height: 700px;
   border: none;
 }
+
+/* Overlay base style */
+.overlay {
+  position: absolute;
+  z-index: 10;
+  background: #00000000; /* semi-transparent black */
+}
+
+/* Top-right logo cover */
+.top-right {
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 20%;
+}
+
+/* Bottom-right info box cover */
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  height: 15%;
+  background: #00000000; /* transparent, change if needed */
+}
+
 iframe{
   width: 100%;
   min-height: 600px;
+  height: 700px;
 }
+
+
 /* ABOUT */
 #bg-video {
     filter: invert(1);
@@ -741,5 +774,12 @@ iframe{
         padding-left: 1rem;
         padding-right: 1rem;
       }
+    /* LOW POLY NTERVIEW 01 */
+    iframe{
+      height: none;
+    }
+    .bottom-right {
+      width: 40%;
+    }
     
 }

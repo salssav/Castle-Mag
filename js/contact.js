@@ -20,8 +20,16 @@ form?.addEventListener("submit", async (e) => {
   });
   if (hasError) return;
 
-  // pretend‑send (replace with real fetch / Formspree / Netlify Forms)
-  // await fetch(form.action, { method: "POST", body: new FormData(form) });
+await fetch("http://localhost:3000/send", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    name: form.name.value,
+    email: form.email.value,
+    subject: form.subject.value,
+    message: form.message.value
+  })
+});
 
   form.reset();
   sentMsg.hidden = false;

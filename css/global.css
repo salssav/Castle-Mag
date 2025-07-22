@@ -385,6 +385,18 @@ header {
     transform-origin: left;
     transform: scaleX(1);
   }
+  #footer-text:hover{
+    animation: rotate 1s ease-in;
+  }
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+  }
 
   
 /* Button Theme Changer*/

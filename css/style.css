@@ -608,7 +608,6 @@ small.error {
     text-shadow: 0px 3px 12px var(--color-green);
     text-align: start;
     font-size: 2rem;
-    margin: 1rem;
 }
 #poly-questions{
   padding: 2rem;
@@ -626,7 +625,7 @@ small.error {
 
 .lowPolyScan iframe {
   width: 100%;
-  height: 700px;
+  height: 800px;
   border: none;
 }
 
@@ -634,24 +633,24 @@ small.error {
 .overlay {
   position: absolute;
   z-index: 10;
-  background: #00000000; /* semi-transparent black */
+  background: #ffffff00; /
 }
 
 /* Top-right logo cover */
 .top-right {
   top: 0;
   right: 0;
-  width: 30%;
-  height: 20%;
+  width: 100%;
+  height: 100px;
 }
 
 /* Bottom-right info box cover */
 .bottom-right {
   bottom: 0;
   right: 0;
-  width: 30%;
-  height: 15%;
-  background: #00000000; /* transparent, change if needed */
+  width: 100%;
+  height: 50px;
+  background: var(--color-white); /* transparent, change if needed */
 }
 
 iframe{
@@ -777,9 +776,6 @@ iframe{
     /* LOW POLY NTERVIEW 01 */
     iframe{
       height: none;
-    }
-    .bottom-right {
-      width: 40%;
     }
     
 }

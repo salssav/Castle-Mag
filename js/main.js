@@ -160,5 +160,29 @@ window.addEventListener("scroll", () => {
   headerLogo.style.height = `${newHeight}rem`;
 });
 
+//MARQUE TEXT FALLBACK
+
+document.querySelectorAll(".marquee").forEach((marquee) => {
+  const track = marquee.querySelector(".marquee-track");
+  const direction = marquee.getAttribute("data-direction") === "reverse" ? -1 : 1;
+
+  const text = track.innerHTML;
+  track.innerHTML += text + text; // Duplicate to ensure seamless loop
+
+  let offset = 0;
+
+  function animate() {
+    offset += direction * 1; // Speed control here
+    track.style.transform = `translateX(${-offset}px)`;
+    if (Math.abs(offset) >= track.scrollWidth / 3) offset = 0;
+    requestAnimationFrame(animate);
+  }
+
+  track.style.whiteSpace = "nowrap";
+  track.style.display = "inline-block";
+  track.style.willChange = "transform";
+  animate();
+});
+
 
 

@@ -776,7 +776,7 @@ iframe{
       }
     /* LOW POLY NTERVIEW 01 */
     iframe{
-      height: none;
+      max-height: 500px;
     }
     
 }

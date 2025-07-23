@@ -292,8 +292,6 @@ header {
     white-space: nowrap;
     letter-spacing: 0.05em;
     vertical-align: middle;
-    font-family: 'Arial', 'Helvetica', 'sans-serif'; 
-    font-variant-emoji: none; /* optional, for future compatibility */
     padding: 0;
     border: none;
     font-size: 2rem;
@@ -302,8 +300,6 @@ header {
   .track-reverse h2{
     display: inline-block;       /* Ensure side-by-side, not stacked */
     color: var(--color-black);
-    font-family: 'Arial', 'Helvetica', 'sans-serif'; /* or your font */
-    font-variant-emoji: none; /* optional, for future compatibility */
     line-height: 3.6rem;
     margin: 0 2rem 0 0;          /* Space between repeats */
     white-space: nowrap;

@@ -254,7 +254,7 @@ header {
 /* MARQUEE TEXT */
 .marquee-text {
     width: 100%;
-    background: var(--color-green);
+    background: black;
     overflow: hidden;
 
   }
@@ -286,7 +286,7 @@ header {
   
   .track h2 {
     display: inline-block;       /* Ensure side-by-side, not stacked */
-    color: var(--color-black);
+    color: rgb(32, 32, 32) ;
     line-height: 3.6rem;
     margin: 0 2rem 0 0;          /* Space between repeats */
     white-space: nowrap;

@@ -142,9 +142,9 @@ button{
 
 
 ::selection {
-  color: var(--color-green);
-  background-color: color-mix(in srgb, var(--color-blue) 60%, var(--color-white) 40%);
-  text-shadow: 2px 2px 2px var(--color-blue)
+  color: var(--color-white);
+  background-color: black;
+  text-shadow: 2px 2px 2px var(--color-pastel-green)
 }
 
 body {
@@ -258,10 +258,6 @@ header {
     overflow: hidden;
 
   }
-  /*about*/
-#marquee-about{
-  background: var(--color-green);
-}
   
   .marquee {
     width: 100%;

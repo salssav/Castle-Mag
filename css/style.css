@@ -421,7 +421,7 @@ small.error {
     border: 1px solid var(--color-black);
 
     padding: 20px;
-    box-shadow: inset 0px 0px 10px 10px var(--color-green);
+    box-shadow: inset 0px 0px 10px 10px var(--color-grey);
 
   }
   .tabs input[type="radio"] {
@@ -434,7 +434,7 @@ small.error {
     border-right: 1px solid var(--color-black);
     border-left: 1px solid var(--color-black);
     border-top: 1px solid var(--color-black);
-    box-shadow: inset 0px 0px 10px 10px var(--color-green);
+    box-shadow: inset 0px 0px 10px 10px var(--color-grey);
 
 }
  
@@ -606,13 +606,13 @@ small.error {
 }
 .low-poly h1{
     color: var(--color-black);
-    text-shadow: 0px 3px 12px var(--color-green);
+    text-shadow: 0px 3px 12px var(--color-grey);
     text-align: start;
     font-size: 2rem;
 }
 #poly-questions{
   padding: 2rem;
-  box-shadow: 0px 3px 40px var(--color-green) ;
+  box-shadow: 0px 3px 40px var(--color-grey) ;
 }
 
 .lowPolyScan {

@@ -1,0 +1,37 @@
+/* Ripple effect with background image support */
+
+#rippleHeader {
+    position: relative;
+    /* Add your background image here - replace with your image path */
+    background-image: url("/sources/images/castillo_.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  #rippleHeader canvas {
+    /* Blend mode controls how the ripple mixes with the background */
+    /* Try different modes: screen, overlay, multiply, soft-light, color-dodge */
+    mix-blend-mode:difference;
+  
+    /* Opacity controls transparency - adjust from 0.0 to 1.0 */
+    opacity: 0.7;
+  
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Optional: Add a subtle overlay for better contrast */
+  #rippleHeader::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Adjust overlay darkness - rgba(0, 0, 0, 0.2) means 20% black */
+    background: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: 1;
+  }
+  

@@ -1,4 +1,6 @@
 // Description: A WebGL-based ripple effect header for a webpage.
+
+
 (function(gl, w, h) {
     const c = gl.canvas;
     const mouse = { x: 0, y: 0, down: 0 };
@@ -92,7 +94,7 @@
             c /= float(MAX_ITER);
             c = 1.17 - pow(c, 1.4);
             vec3 color = vec3(pow(abs(c), 8.0));
-            color = clamp(color + vec3(0.0, .1, 0.4), 0.0, 1.0);
+            color = clamp(color + vec3(0.0, 0.0, 0.06), 0.1, 1.0);
             float f = (mouse.z > 0.5 ? 0.2 : 0.01) / length(uv - (vec2(mouse.x, mouse.y)));
             gl_FragColor = vec4(color + f, 1.0);
         }

@@ -283,7 +283,7 @@ header {
   
   .track h2 {
     display: inline-block;       /* Ensure side-by-side, not stacked */
-    color: rgb(32, 32, 32) ;
+    color: rgb(54, 53, 53) ;
     line-height: 3.6rem;
     margin: 0 2rem 0 0;          /* Space between repeats */
     white-space: nowrap;
@@ -296,7 +296,7 @@ header {
 
   .track-reverse h2{
     display: inline-block;       /* Ensure side-by-side, not stacked */
-    color: var(--color-black);
+    color: rgb(54, 53, 53);
     line-height: 3.6rem;
     margin: 0 2rem 0 0;          /* Space between repeats */
     white-space: nowrap;

@@ -35,6 +35,7 @@
     --color-green: #B9FE0D;
     --color-purple: #6563f6;
     --color-pastel-green:#f5f9e4;
+    --color-brown: #403329;
     --theme:light;
     --cursor-normal: url(/sources/cursor/gauntlet.cur), auto;
     --cursor-hover: url(/sources/cursor/LINK\ SELECT.cur), auto;
@@ -282,7 +283,7 @@ header {
   
   .track h2 {
     display: inline-block;       /* Ensure side-by-side, not stacked */
-    color: rgb(32, 32, 32) ;
+    color: rgb(54, 53, 53) ;
     line-height: 3.6rem;
     margin: 0 2rem 0 0;          /* Space between repeats */
     white-space: nowrap;
@@ -295,7 +296,7 @@ header {
 
   .track-reverse h2{
     display: inline-block;       /* Ensure side-by-side, not stacked */
-    color: var(--color-black);
+    color: rgb(54, 53, 53);
     line-height: 3.6rem;
     margin: 0 2rem 0 0;          /* Space between repeats */
     white-space: nowrap;

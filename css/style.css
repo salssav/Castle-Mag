@@ -61,7 +61,7 @@
     justify-content: center;
     position: absolute;
     inset: 0;
-    background: rgba(176, 185, 209, 0.377);
+    background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     opacity: 0;
